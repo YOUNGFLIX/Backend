@@ -36,4 +36,10 @@ public class MemberController {
         return ResponseEntity.ok(new ApiResponse<>(200, "내 정보 수정 성공", response));
     }
 
+    @GetMapping("/check-email")
+    public ResponseEntity<ApiResponse<Boolean>> checkEmailDuplicate(@RequestParam String email) {
+        boolean isDuplicate = memberService.isEmailDuplicate(email);
+        return ResponseEntity.ok(new ApiResponse<>( 200, "이메일 중복 검사 결과", isDuplicate));
+    }
+
 }
