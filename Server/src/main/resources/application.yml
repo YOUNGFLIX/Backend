@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${youngflix_DB_URL}
-    username: ${youngflix_DB_USERNAME}
-    password: ${youngflix_DB_PASSWORD}
+    url: ${youngflix_DB_URL:jdbc:mysql://localhost:3306/youngflix?serverTimezone=Asia/Seoul&characterEncoding=UTF-8}
+    username: ${youngflix_DB_USERNAME:root}
+    password: ${youngflix_DB_PASSWORD:dnjswnsdud1.}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -22,7 +22,7 @@ spring:
       org.hibernate.SQL: DEBUG
       org.hibernate.orm.jdbc.bind: TRACE
 
-jwt:
+auth:
   secret: ${JWT_SECRET}
   expiration: ${JWT_EXPIRATION}
 
