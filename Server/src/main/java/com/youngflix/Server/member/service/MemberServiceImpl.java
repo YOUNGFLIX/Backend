@@ -37,4 +37,23 @@ public class MemberServiceImpl implements MemberService {
             member.getAvatar()
         );
     }
+
+    @Override
+    public MemberInfoResponse updateMyInfo(String email, MemberInfoResponse request) {
+        Member member = memberRepository.findByEmail(email)
+            .orElseThrow(() -> new IllegalArgumentException("회원을 찾을 수 없습니다."));
+
+        member.setName(request.getName());
+        member.setNickname(request.getNickname());
+        member.setAvatar(request.getAvatar());
+
+        memberRepository.save(member);
+
+        return new MemberInfoResponse(
+            member.getEmail(),
+            member.getName(),
+            member.getNickname(),
+            member.getAvatar()
+        );
+    }
 }

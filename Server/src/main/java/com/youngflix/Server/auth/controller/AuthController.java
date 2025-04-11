@@ -4,8 +4,6 @@ package com.youngflix.Server.auth.controller;
 import com.youngflix.Server.auth.dto.LoginRequest;
 import com.youngflix.Server.auth.dto.TokenResponse;
 import com.youngflix.Server.auth.service.AuthService;
-import com.youngflix.Server.common.response.ApiResponse;
-import com.youngflix.Server.member.dto.SignupRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
