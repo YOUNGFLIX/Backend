@@ -56,4 +56,8 @@ public class MemberServiceImpl implements MemberService {
             member.getAvatar()
         );
     }
+
+    public boolean isEmailDuplicate(String email) {
+        return memberRepository.findByEmail(email).isPresent();
+    }
 }

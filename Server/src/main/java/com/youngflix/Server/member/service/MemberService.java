@@ -7,4 +7,5 @@ public interface MemberService {
     void signup(SignupRequest request);
     MemberInfoResponse getMyInfo(String email);
     MemberInfoResponse updateMyInfo(String email, MemberInfoResponse request);
+    boolean isEmailDuplicate(String email);
 }
