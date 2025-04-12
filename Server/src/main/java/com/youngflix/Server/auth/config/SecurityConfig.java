@@ -43,8 +43,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/v1/auth/**",
-                                "/v1/member/signup",
-                                "/v1/member/check-email"
+                                "/v1/email/**",
+                                "/v1/member/signup"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

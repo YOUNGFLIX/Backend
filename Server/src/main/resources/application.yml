@@ -22,8 +22,25 @@ spring:
       org.hibernate.SQL: DEBUG
       org.hibernate.orm.jdbc.bind: TRACE
 
+
+  mail:
+    host: smtp.naver.com
+    port: 587
+    username: gl021414@naver.com
+    password: 3Q22ERU3KHRY
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          starttls.enable: true
+          starttls.trust: smtp.naver.com
+    default-encoding: UTF-8
+
 auth:
   secret: ${JWT_SECRET}
   expiration: ${JWT_EXPIRATION}
+
 
 spring.config.import: optional:.env
