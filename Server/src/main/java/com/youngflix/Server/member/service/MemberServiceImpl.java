@@ -4,9 +4,7 @@ import com.youngflix.Server.member.dto.SignupRequest;
 import com.youngflix.Server.member.dto.MemberInfoResponse;
 import com.youngflix.Server.member.entity.Member;
 import com.youngflix.Server.member.repository.MemberRepository;
-import com.youngflix.Server.member.repository.VerificationTokenRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

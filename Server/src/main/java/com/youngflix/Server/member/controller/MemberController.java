@@ -1,12 +1,9 @@
 package com.youngflix.Server.member.controller;
 
 import com.youngflix.Server.common.response.ApiResponse;
-import com.youngflix.Server.member.dto.EmailRequest;
 import com.youngflix.Server.member.dto.MemberInfoResponse;
 import com.youngflix.Server.member.dto.SignupRequest;
-import com.youngflix.Server.member.dto.VerifyCodeRequest;
 import com.youngflix.Server.member.service.MemberService;
-import com.youngflix.Server.member.service.MemberServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
