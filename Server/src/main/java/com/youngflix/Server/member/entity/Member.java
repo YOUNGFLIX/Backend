@@ -35,6 +35,6 @@ public class Member {
     private String avatar;
 
     @Column(nullable = false)
-    private boolean emailVerified = true;
+    private boolean emailVerified;
 
 }

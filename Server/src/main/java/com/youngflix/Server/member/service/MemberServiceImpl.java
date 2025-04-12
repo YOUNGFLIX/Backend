@@ -35,6 +35,7 @@ public class MemberServiceImpl implements MemberService {
                 .password(encodedPassword)
                 .name(request.getName())
                 .nickname(request.getNickname())
+                .emailVerified(true)
                 .build();
 
         memberRepository.save(member);
