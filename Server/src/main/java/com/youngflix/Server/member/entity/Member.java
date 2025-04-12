@@ -32,7 +32,9 @@ public class Member {
     @Column(nullable = false)
     private String nickname;
 
-    @Column(nullable = true)
     private String avatar;
+
+    @Column(nullable = false)
+    private boolean emailVerified = true;
 
 }
