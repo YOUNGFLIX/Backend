@@ -4,7 +4,7 @@ package com.youngflix.Server.member.controller;
 import com.youngflix.Server.common.response.ApiResponse;
 import com.youngflix.Server.member.dto.EmailRequest;
 import com.youngflix.Server.member.dto.VerifyCodeRequest;
-import com.youngflix.Server.member.service.EmailVerificationServiceImpl;
+import com.youngflix.Server.member.service.EmailVerificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/v1/email")
 public class EmailVerificationController {
 
-    private EmailVerificationServiceImpl emailVerificationService;
+    private final EmailVerificationService emailVerificationService;
 
     /**
      * 중복 이메일 체크

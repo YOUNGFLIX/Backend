@@ -5,4 +5,5 @@ public interface EmailVerificationService {
     String createEmailVerificationToken(String email);
     void sendVerificationEmail(String toEmail, String token);
     boolean verifyCode(String email, String code);
+    boolean sendVerificationCode(String email);
 }
